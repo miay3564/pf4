@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백상 갤러리샵</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=East+Sea+Dokdo&family=Limelight&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Playball&display=swap" rel="stylesheet">
+
+    <!-- slick -->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.titext').slick({
+                infinite: true,
+                dots:true,
+                slidesToShow:1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+            $('.beartAni').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 769, // 화면이 768px 이하일 때
+                        settings: {
+                            slidesToShow: 1, // 한 번에 하나만 표시
+                        },
+                    },
+                ],
+            });
+            $('.mdAni').slick({
+                infinite: true,
+                dots:true,
+                slidesToShow:1,
+                slidesToScroll: 1,
+                fade: true
+            });
+            $('.nartAni').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 769, // 화면이 768px 이하일 때
+                        settings: {
+                            slidesToShow: 1, // 한 번에 하나만 표시
+                        },
+                    },
+                ],
+            });
+            $('.reviewArt').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 769, // 화면이 768px 이하일 때
+                        settings: {
+                            slidesToShow: 1, // 한 번에 하나만 표시
+                        },
+                    },
+                ],
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h1><a href="#" class="block">BAEXANG GALLERY</a></h1>
+        <div id="ham">
+            <a href="#" class="ham block">전체 메뉴</a>
+            <ul class="ham">
+                <li>
+                    <a href="#" class="block">Product</a>
+                    <ul class="sub">
+                        <li><a href="#" class="block">베스트</a></li>
+                        <li><a href="#" class="block">신상품</a></li>
+                        <li><a href="#" class="block">사진작품</a></li>
+                        <li><a href="#" class="block">그림작품</a></li>
+                        <li><a href="#" class="block">작가별</a></li>
+                        <li><a href="#" class="block">장르별</a></li>
+                        <li><a href="#" class="block">주제별</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="block">About Baexang</a>
+                    <ul class="sub">
+                        <li><a href="#" class="block">회사소개</a></li>
+                        <li><a href="#" class="block">갤러리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="block">Community</a>
+                    <ul class="sub">
+                        <li><a href="#" class="block">공지사항</a></li>
+                        <li><a href="#" class="block">이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="block">Service</a>
+                    <ul class="sub">
+                        <li><a href="#" class="block">FAQ</a></li>
+                        <li><a href="#" class="block">제휴협찬문의</a></li>
+                        <li><a href="#" class="block">1:1문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="nav">
+            <nav id="gnb">
+                <h2 class="hide">대메뉴</h2>    
+                <ul class="gnb">
+                    <li><a href="#" class="block">베스트</a></li>
+                    <li><a href="#" class="block">신상품</a></li>
+                    <li><a href="#" class="block">사진작품</a></li>
+                    <li><a href="#" class="block">그림작품</a></li>
+                    <li><a href="#" class="block">작가별</a></li>
+                    <li><a href="#" class="block">장르별</a></li>
+                    <li><a href="#" class="block">주제별</a></li>
+                </ul>
+            </nav>
+            <nav id="my">
+                <h2 class="hide">마이메뉴</h2>
+                <ul class="my">
+                    <li><a href="#" class="block">로그인</a></li>
+                    <li><a href="#" class="block">회원가입</a></li>
+                    <li><a href="#" class="block">주문조회</a></li>
+                    <li><a href="#" class="block">장바구니</a></li>
+                    <li><a href="#" class="block">고객센터</a></li>
+                    <li><a href="#" class="block">검색</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    
+    <div id="title">
+        <ul class="titext">
+            <li class="t t1">
+                <p>ART & DESIGN</p>
+                <h2>BAEXANG GALLERY SHOP <br>GRAND OPEN</h2>
+            </li>
+            <li class="t t2">
+                <p>BAEXANG GALLERY</p>
+                <h2>GRAND OPEN</h2>
+            </li>
+            <li class="t t3">
+                <p>Art · Design in</p>
+                <h2>BAEXANG</h2>
+            </li>
+        </ul>
+        <ul class="title">
+            <li><a href="#" class="block">01<span class="block">BAEXANG GALLERY SHOP <span class="block tb">GRAND OPEN</span></span></a></li>
+            <li><a href="#" class="block">02<span class="block">GRAND OPEN</span></a></li>
+            <li><a href="#" class="block">03<span class="block">BAEXANG</span></a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- BEST ART SECTION -->
+        <section class="bestArt">
+            <h2>BEST ART</h2>
+            <p>백상에서 가장 인기있는 작품을 소개합니다.</p>
+            <div class="beart beartAni">
+                <div class="bart bart1">
+                    <h3><a href="#" class="block">아를의 랑그루아 다리</a></h3>
+                    <ul class="bartText">
+                        <li><span class="blind">화가</span>빈센트 반 고흐</li>
+                        <li><span class="blind">규격</span>30.0cm x 30.0cm</li>
+                        <li><span class="blind">판매가</span>₩38,200</li>
+                    </ul>
+                </div>
+                <div class="bart bart2">
+                    <h3><a href="#" class="block">키스</a></h3>
+                    <ul class="bartText">
+                        <li><span class="blind">화가</span>구스타프 클림트</li>
+                        <li><span class="blind">규격</span>30.0cm x 30.0cm</li>
+                        <li><span class="blind">판매가</span>₩36,500</li>
+                    </ul>
+                </div>
+                <div class="bart bart3">
+                    <h3><a href="#" class="block">앙티브이 아침</a></h3>
+                    <ul class="bartText">
+                        <li><span class="blind">화가</span>클로드 모네</li>
+                        <li><span class="blind">규격</span>30.0cm x 30.0cm</li>
+                        <li><span class="blind">판매가</span>₩35,700</li>
+                    </ul>
+                </div>
+                <div class="bart bart4">
+                    <h3><a href="#" class="block">아테제 호수</a></h3>
+                    <ul class="bartText">
+                        <li><span class="blind">화가</span>구스타프 클림트</li>
+                        <li><span class="blind">규격</span>30.0cm x 30.0cm</li>
+                        <li><span class="blind">판매가</span>₩42,400</li>
+                    </ul>
+                </div>
+                <div class="bart bart5">
+                    <h3><a href="#" class="block">지베르니 봄의 효과</a></h3>
+                    <ul class="bartText">
+                        <li><span class="blind">화가</span>클로드 모네</li>
+                        <li><span class="blind">규격</span>30.0cm x 30.0cm</li>
+                        <li><span class="blind">판매가</span>₩36,500</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- MD PICK SECTION -->
+        <section class="mdPick">
+            <h2>MD PICK</h2>
+            <p>백상 큐레이터가 선정한 추천 작품을 만나보세요.</p>
+            <ul class="mdl">
+                <li><a href="#" class="block">그림작품</a></li>
+                <li><a href="#" class="block">사진작품</a></li>
+            </ul>
+            <ul class="md mdAni">
+                <li>
+                    <img src="img/mdpick.png" alt="구스타프 클림트 산지기의 집">
+                    <a href="#" class="block blind">그림작품</a>
+                    <div class="mdArt mdArt1">
+                        <h3>구스타프 클림트<span class="block">산지기의 집</span></h3>
+                        <p>구스타프 클림트의 산지기의 집(House in the garden)입니다. 구스타프 클림트는 오스트리아의 화가. 아르누보 계열의 장식적인 양식을 선호하며 전통적인 미술에 대항해 ‘빈 분리파’를 결성했다. 관능적인 여성 이미지와 찬란한 황금빛, 화려한 색채를 특징으로 하고 성(性)과 사랑, 죽음에 대한 알레고리로 많은 사람들을 매혹시켰다.</p>
+                        <a href="#" class="block">Read More</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/mdpick2.jpg" alt="빈센트 반 고흐 수확하는 사람">
+                    <a href="#" class="block blind">사진작품</a>
+                    <div class="mdArt mdArt2">
+                        <h3>빈센트 반 고흐<span class="block">수확하는 사람</span></h3>
+                        <p>빈센트 반 고흐는 장 프랑수아 밀레(Jean Francois Millet)의 &lt;씨 뿌리는 사람&gt;(1850) 및 &lt;이삭 줍는 여인들-이삭줍기&gt;(1857)와 같은 작품들에서 영감을 받아 농촌에서 행해지는 일들에 관심이 많았고, 그와 관련한 다수의 연작들을 그렸다. 들에서 수확을 하고 있는 농부의 모습과 더불어 수확기의 황금빛 밀밭의 색채가 내는 효과가 보는 이의 시선을 사로잡는다.</p>
+                        <a href="#" class="block">Read More</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- NEW ART SECTION -->
+        <section class="newArt">
+            <h2>NEW ART</h2>
+            <p>백상과 함께하는 새로운 작품들을 소개합니다.</p>
+            <div class="nartAni nart">
+                <div class="newArt newArt1">
+                    <h3>피에르 보나르<span class="block">베르농의 테라스</span></h3>
+                    <p>강렬한 색채와 평면성이 강조된 뚜렷한 윤곽선, 평평한 색면 추구에 열정을 쏟았던 '나비파'의 유산을 느낄 수 있다.</p>
+                    <a href="#" class="block"><span class="blind">피에르 보나르의 베르농의 테라스</span>Read More</a>
+                </div>
+                <div class="newArt newArt2">
+                    <h3>빈센트 반 고흐<span class="block">밤의 프로방스 시골길</span></h3>
+                    <p>1889년 5월부터 1890년 5월 생레미에서 머문 기간 동안의 작품들은 반 고흐 특유의 소용돌이치며 꿈틀대는 선들로 가득했다. 이 시기 반 고흐의 마음을 사로잡은 소재는 사이프러스 나무였다.</p>
+                    <a href="#" class="block"><span class="blind">빈센트 반 고흐 밤의 프로방스 시골길</span>Read More</a>
+                </div>
+                <div class="newArt newArt3">
+                    <h3>클로드 모네<span class="block">양산을 든 여인 - 카미유와 장스</span></h3>
+                    <p>마네의 도움으로 1871년 모네는 아르장퇴유에 거처를 마련하였다. 양산을 든 여인(1875)는 1875년 여름에서 1876년 사이에 그린 일련의 작품 시리즈 가운데 하나이다. 이때 그린 시리즈물의 풍경은 파리 외곽인 아르장퇴유의 두 번째 집 주위의 정원을 묘사하고 있다.</p>
+                    <a href="#" class="block"><span class="blind">클로드 모네의 산을 든 여인 - 카미유와 장스</span>Read More</a>
+                </div>
+                <div class="newArt newArt4">
+                    <h3>클로드 모네<span class="block">세느강의 봄</span></h3>
+                    <p>세느강의 봄 클로드 모네</p>
+                    <a href="#" class="block"><span class="blind">클로드 모네의 세느강의 봄</span>Read More</a>
+                </div>
+                <div class="newArt newArt5">
+                    <h3>구스타프 클림트<span class="block">헤르미네 갈리아의 초상</span></h3>
+                    <p>구스타프 클림트 헤르미네 갈리아의 초상</p>
+                    <a href="#" class="block"><span class="blind">구스타프 클림트의 헤르미네 갈리아의 초상</span>Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP SECTION -->
+        <section class="shop">
+            <div class="shop">
+                <h2>BAEXANG GALLERY</h2>
+                <p>백상 갤러리에서 다양한 그림을 직접 감상하고 구입하세요.</p>
+                <a href="#" class="block">Read More</a>
+            </div>
+        </section>
+
+        <!-- REVIEW SECTION -->
+        <section class="review">
+            <h2>REVIEW</h2>
+            <p>백상의 작품을 이용한 고객들의 실제 후기입니다.</p>
+            <div class="reviewArt">
+                <div class="rvart rvart1">
+                    <p class="date">02 <span class="block">jun</span></p>
+                    <ul class="reh3">
+                        <li>아티제 호수</li>
+                        <li>구스타프 클림트</li>
+                    </ul>
+                    <p class="rv">배송 포장 모두 만족합니다. 그림 퀄리티는 말할 것도 없고, 색상도 선명하고 무광이라 반사도 적은 것 같아요. 선물 이후에 너무 좋아하셔서 보러갔는데 믿고 살만하네요~</p>
+                    <a href="#" class="block">Read More</a>
+                </div>
+                <div class="rvart rvart2">
+                    <p class="date">02 <span class="block">jun</span></p>
+                    <ul class="reh3">
+                        <li>키스</li>
+                        <li>구스타프 클림트</li>
+                    </ul>
+                    <p class="rv">생각했던 것보다 약간 어두운 느낌은 있지만, 식탁 옆 벽에 거니까 크기도 적당하고 퀄리티도 아주 좋습니다. 백상에서 다른 그림으로 하나 더 구매하려고 해요. 배송 빠르게 잘왔습니다, 감사합니다.</p>
+                    <a href="#" class="block">Read More</a>
+                </div>
+                <div class="rvart rvart3">
+                    <p class="date">02 <span class="block">jun</span></p>
+                    <ul class="reh3">
+                        <li>꽃 피는 아몬드 나무</li>
+                        <li>빈센트 반 고흐</li>
+                    </ul>
+                    <p class="rv">그림이 깔끔하고 가볍고 좋아요~ 이사하고 집이 너무 휑한거 같아서 이번 기회에 작품 하나 샀는데 그림 하나도 분위기가 너무 달라졌어요. 배송도 빠르고 너무 감사합니다.</p>
+                    <a href="#" class="block">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div id="footer">
+            <ul class="fnb">
+                <li><a href="#" class="block"> <strong>개인정보처리방침</strong></a></li>
+                <li><a href="#" class="block">이용약관</a></li>
+                <li><a href="#" class="block">회사소개</a></li>
+            </ul>
+            <address>대표자 : 권순상 | 사업자 등록번호 : 137-81-30071 <br>
+                주소 : 경기도 고양시 일산동구 산황로 178-15 | EMAIL : gbaexang@gmail.com | TEL : 031-954-9541 | FAX : 031-977-9540
+                <span class="block">Copyright © 2022 Baexang Gallery. All rights reserved.</span>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>

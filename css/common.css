@@ -1,0 +1,27 @@
+body{  
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.blind{
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%); 
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
