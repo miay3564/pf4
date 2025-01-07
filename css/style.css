@@ -1,21 +1,34 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1;
+}
+header #header{
+  width: 100%;
+  height: 100%;
   display: flex;
   padding: 0 50px;
   position: relative;
   justify-content: space-between;
   background-color: #fff;
 }
-header h1 {
+header #header h1 {
   order: 3;
   position: absolute;
   top: calc(50% - 25px);
   left: calc(50% - 63px);
 }
-header h1 > a {
+header #header h1 > a {
   font-size: 0;
 }
-header h1 > a::before{
+header #header h1 > a::before{
   content: "";
   display: block;
   width: 126px;
@@ -25,17 +38,17 @@ header h1 > a::before{
   background-repeat: no-repeat;
   background-size: contain;
 }
-header #ham {
+header #header #ham {
   height: 100%;
 }
-header #ham a {
+header #header #ham a {
   height: 100%;
   font-size: 0;
   position: absolute;
   top: calc(50% - 6.5px);
   left: 50px;
 }
-header #ham a::before{
+header #header #ham a::before{
   content: "";
   display: block;
   width: 23px;
@@ -45,81 +58,80 @@ header #ham a::before{
   background-repeat: no-repeat;
   background-size: contain;
 }
-header #ham ul.ham {
+header #header #ham ul.ham {
   display: none;
 }
-header #ham ul.ham li {
+header #header #ham ul.ham li {
   
 }
-header #ham ul.ham li a {
+header #header #ham ul.ham li a {
   
 }
-header #ham ul.ham li ul.sub {
+header #header #ham ul.ham li ul.sub {
   
 }
-header #ham ul.ham li ul.sub li {
+header #header #ham ul.ham li ul.sub li {
   
 }
-header #ham ul.ham li ul.sub li a {
+header #header #ham ul.ham li ul.sub li a {
   
 }
-header .nav{
-  
+header #header .nav{
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .nav nav#gnb {
+header #header .nav nav#gnb {
   display: flex;
   margin-left: 50px;
 }
-header .nav nav#gnb h2 {
+header #header .nav nav#gnb h2 {
   
 }
-header .nav nav#gnb ul.gnb {
+header #header .nav nav#gnb ul.gnb {
   display: flex;
   height: 100%;
 }
-header .nav nav#gnb ul.gnb > li {
+header #header .nav nav#gnb ul.gnb > li {
   height: 100%;
 }
-header .nav nav#gnb ul.gnb > li > a {
+header #header .nav nav#gnb ul.gnb > li > a {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
 }
-header .nav nav#gnb ul.gnb > li > a:hover{ 
+header #header .nav nav#gnb ul.gnb > li > a:hover{ 
   font-weight: 600;
   color: #67af79;
 }
-header .nav nav#my {
+header #header .nav nav#my {
   box-sizing: border-box;
 }
-header .nav nav#my h2 {
+header #header .nav nav#my h2 {
   
 }
-header .nav nav#my ul.my {
+header #header .nav nav#my ul.my {
   display: flex;
   height: 100%;
 }
-header .nav nav#my ul.my li {
+header #header .nav nav#my ul.my li {
   
   height: 100%;
 }
-header .nav nav#my ul.my li a {
+header #header .nav nav#my ul.my li a {
   height: 100%;
   padding: 20px;
 }
-header .nav nav#my ul.my li a:hover{ 
+header #header .nav nav#my ul.my li a:hover{ 
   font-weight: 600;
   color: #67af79;
 }
-header .nav nav#my ul.my li:last-child a{
+header #header .nav nav#my ul.my li:last-child a{
   font-size: 0;
 }
-header .nav nav#my ul.my li:last-child a::before{
+header #header .nav nav#my ul.my li:last-child a::before{
   content: "";
   display: block;
   width: 23px;
@@ -135,6 +147,7 @@ header .nav nav#my ul.my li:last-child a::before{
   position: relative;
   overflow: hidden;
   padding: 0 50px 50px;
+  margin-top: 100px;
 }
 #title ul.titext{
   height: 100%;
@@ -314,10 +327,14 @@ main section.bestArt .beart {
   margin: auto;
 }
 main section.bestArt .beart .slick-prev{  
-  left: -50px;
+  left: -80px;
+  width: 17px;
+  height: 36px;
 }
 main section.bestArt .beart .slick-next{  
-  right: -50px;
+  right: -70px;
+  width: 17px;
+  height: 36px;
 }
 main section.bestArt .beart .slick-prev::before, main section.bestArt .beart .slick-next::before{
   font-size: 0
@@ -353,7 +370,6 @@ main section.bestArt .beart .bart h3 {
 main section.bestArt .beart .bart h3 a {
   font-size: 24px;
   color: #333333;
-  font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 600;
@@ -503,7 +519,7 @@ main section.mdPick > p {
 main section.mdPick ul.mdl{
   display: flex;
   position: absolute;
-  top: 214px;
+  top: 240px;
   left: calc(50% - 84px);
 }
 main section.mdPick ul.mdl li:first-child{
@@ -532,32 +548,57 @@ main section.mdPick ul.md {
   width: calc(100% - 100px);
   margin: 0 auto;
 }
-main section.mdPick ul.md li {
+main section.mdPick ul.md .slick-list .slick-track li{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
+  transform: translateY(9%);
 }
-main section.mdPick ul.md li img{
+/* main section.mdPick ul.md > li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+} */
+main section.mdPick ul.md .slick-list .slick-track li::before{
+  content: "";
+  display: block;
+  width: 1340px;
+  height: 440px;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1000;
+  top: 60px;
+  right: 0;
+  box-shadow:1px 3px 13px rgba(0,0,0,0.13);
+}
+/* main section.mdPick ul.md > li::before{
+  content: "";
+  display: block;
+  width: 1000px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1000;
+  top: 0;
+  right: 0;
+} */
+main section.mdPick ul.md .slick-list .slick-track li img{
   width: 640px;
   height: 500px;
   padding-top: 110px;
 }
-main section.mdPick ul.md > li:nth-child(1) > a {
-  position: absolute;
-  top: 15px;
-  left: calc(50% - 100px);
-}
-main section.mdPick ul.md li:nth-child(2) > a {
-  position: absolute;
-  top: 0;
-  right: calc(50% - 100px);
-}
+/* main section.mdPick ul.md > li > img{
+  width: 640px;
+  height: 500px;
+  padding-top: 110px;
+} */
 main section.mdPick .md .mdArt{
   padding: 30px 80px 30px 80px;
   width: 50%;
   min-height: 500px;
   box-sizing: border-box;
+  position: relative;
 }
 main section.mdPick .md .mdArt h3 {
   padding-left: 2px;
@@ -595,16 +636,16 @@ main section.mdPick .md .mdArt > a {
 }
 main section.mdPick ul.md .slick-dots{
   display: flex !important;
-  top: 21px;
+  top: 48px;
   bottom: initial;
   width: fit-content;
   left: calc(50% - 104px);
 }
-main section.mdPick ul.md .slick-dots li{
+main section.mdPick ul.md .slick-dots > li{
   width: 59px;
   margin: 0 20px;
 }
-main section.mdPick ul.md .slick-dots li button::before{
+main section.mdPick ul.md .slick-dots > li button::before{
   font-size: 0;
 }
 main section.mdPick ul.md .slick-prev, main section.mdPick ul.md .slick-next{
@@ -663,6 +704,9 @@ main section.newArt .nart {
   margin-top: 105px;
   max-width: 1400px;
   width: calc(100% - 100px);
+}
+main section.newArt .nart .slick-dots{
+  display: none !important;
 }
 main section.newArt .nart .newArt {
   
@@ -788,7 +832,14 @@ main section.newArt .nart .slick-prev::before, main section.newArt .nart .slick-
   font-size: 0
 }
 main section.newArt .nart .slick-prev{
-  left: -40px;
+  left: -80px;
+  width: 17px;
+  height: 36px;
+}
+main section.newArt .nart .slick-next{
+  right: -70px;
+  width: 17px;
+  height: 36px;
 }
 main section.newArt .nart .slick-prev::before{
   background-image: url(../img/left.png);
@@ -902,6 +953,9 @@ main section.review .reviewArt {
   margin-top: 105px;
   max-width: 1400px;
   width: calc(100% - 100px);
+}
+main section.review .reviewArt .slick-dots{
+  display: none !important;
 }
 main section.review .reviewArt .rvart {
   position: relative;
