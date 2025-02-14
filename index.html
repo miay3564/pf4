@@ -22,6 +22,7 @@
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
         $(document).ready(function(){
@@ -83,6 +84,42 @@
                 ],
             });
         });
+        $(document).ready(function(){
+            //a.ham을 누르면 실행하시오
+            $("header #header #ham > a").click(
+                function(){
+                    $("header #header #ham ul.ham").toggleClass("show");
+                    $("header #header #ham ul.log").toggleClass("show");
+                }
+            );
+        });
+        $(document).ready(function(){
+            //li에 마우스올리면 실행하시오
+            $("header #header #ham ul.ham > li:nth-child(1) > a").click(
+                function(){ // 마우스가 진입하는 행위
+                    //마우스 올린li의 ul을 fadeIn()하시오
+                    $("header #header #ham ul.ham > li:nth-child(1) > ul.sub").toggleClass("on");
+                }
+            );
+            $("header #header #ham ul.ham > li:nth-child(2) > a").click(
+                function(){ // 마우스가 진입하는 행위
+                    //마우스 올린li의 ul을 fadeIn()하시오
+                    $("header #header #ham ul.ham > li:nth-child(2) > ul.sub").toggleClass("on");
+                }
+            );
+            $("header #header #ham ul.ham > li:nth-child(3) > a").click(
+                function(){ // 마우스가 진입하는 행위
+                    //마우스 올린li의 ul을 fadeIn()하시오
+                    $("header #header #ham ul.ham > li:nth-child(3) > ul.sub").toggleClass("on");
+                }
+            );
+            $("header #header #ham ul.ham > li:nth-child(4)> a").click(
+                function(){ // 마우스가 진입하는 행위
+                    //마우스 올린li의 ul을 fadeIn()하시오
+                    $("header #header #ham ul.ham > li:nth-child(4) > ul.sub").toggleClass("on");
+                }
+            );
+        });
     </script>
 </head>
 <body>
@@ -127,6 +164,11 @@
                             <li><a href="#" class="block">1:1문의</a></li>
                         </ul>
                     </li>
+                </ul>
+                <ul class="log flex">
+                    <li><a href="#" class="block">로그인</a></li>
+                    <li><a href="#" class="block">회원가입</a></li>
+                    <li><a href="#" class="block">개인결제창</a></li>
                 </ul>
             </div>
             <div class="nav">
